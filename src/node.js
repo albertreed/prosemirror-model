@@ -217,7 +217,8 @@ export class Node {
 
   // :: (number) → ResolvedPos
   // Resolve the given position in the document, returning an
-  // [object](#model.ResolvedPos) with information about its context.
+  // [object](#model.ResolvedPos) with information about its context. 
+  // Position is specified relative to this node.
   resolve(pos) { return ResolvedPos.resolveCached(this, pos) }
 
   resolveNoCache(pos) { return ResolvedPos.resolve(this, pos) }
